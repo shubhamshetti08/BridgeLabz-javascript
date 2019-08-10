@@ -1,5 +1,5 @@
 /********************************************************************************************************************
-* @Execution : default node : cmd> binarySearchInt.js
+* @Execution : default node : cmd> binarySearchFile.js
 * @Purpose : to study the algorithms.
 * @description :  Reading in a list of words from File Then taking key from user to search  the list. The program reports if the search word is found in the list.
 * @overview : reading words from file search for key if found displaying results.
@@ -8,7 +8,15 @@
 * @since : 09-August-2019
 *******************************************************************************************************************/
 let read = require('readline-sync');
-let reference = require('/home/admin1/Desktop/shubham/utility/utility.js');
-var key = read.question('enter number to search  ');
-var arr = [2, 4, 5, 6, 1, 89, 87, 98, -1, -3];
-var result = reference.binarySearchInt(arr.sort(), key);
+const reference = require('../../utility/utility');
+//read string from file
+var arr = reference.readFile('../files/temp.txt');
+let string = read.question('enter string to search  ');
+// joining array and sending to functoin
+reference.binarySearchString(arr.join(' '), string);
+
+
+
+
+
+

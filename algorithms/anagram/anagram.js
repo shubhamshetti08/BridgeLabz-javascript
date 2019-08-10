@@ -9,12 +9,12 @@
 *******************************************************************************************************************/
 let read = require('readline-sync');
 let reference = require('../anagram/angramBL.js');
-let s1="cdCAab";
-let s2 ="acbac";
-let result =reference.anagram(s1,s2);
-if(result==true){
+let s1 = "cdCAab";
+let s2 = "acbac";
+let result = reference.anagram(s1, s2);
+if (result == true) {
     console.log('string is anagram');
 }
-else{
+else {
     console.log('string is not anagram');
 }

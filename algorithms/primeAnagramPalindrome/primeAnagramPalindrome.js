@@ -9,29 +9,29 @@
 *******************************************************************************************************************/
 
 let read = require('readline-sync');
-let reference1= require('../primeAnagramPalindrome/primeAnagramPalindromeBL');
-var arr=[];
-var s=[];
-var a=[];
-for(let n=2;n<1000;n++){
-    let res=reference1.prime(n);
-    if(res==true)
-    {
+let reference1 = require('../primeAnagramPalindrome/primeAnagramPalindromeBL');
+var arr = [];
+var s = [];
+var a = [];
+for (let n = 2; n < 1000; n++) {
+  // sending to prime function
+  let res = reference1.prime(n);
+  if (res == true) {
     arr.push(n);
-    }
-//if(result==true){
+  }
+  //if(result==true){
   //  if(!arr.includes(n)){
-     //   arr.push(n);
+  //   arr.push(n);
   //  }
-//}
+  //}
 
 }
 //s=arr;
 console.log(arr);
-s=reference1.isAnagram(arr);
-for(let i=0;i<s.length;i++){
-    //console.log(s[i]);
-reference1.isPalindrome(s[i]);
+s = reference1.isAnagram(arr);
+for (let i = 0; i < s.length; i++) {
+  //console.log(s[i]);
+  reference1.isPalindrome(s[i]);
 }
 // //console.log(result);
 // if(result==true){

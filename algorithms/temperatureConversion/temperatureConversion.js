@@ -10,11 +10,12 @@
 
 let read = require('readline-sync');
 let reference = require('../temperatureConversion/temperatureConversionBL.js')
-let choice =read.question('enter 1 to write in celcious or 2 to farhenheit');
+let choice = read.question('enter 1 to write in celcious or 2 to farhenheit');
 let temperature = read.question('enter temperature');
-if(choice==1){
-reference.conversion(temperature,1);
+// choice given to user
+if (choice == 1) {
+    reference.conversion(temperature, 1);
 }
-else if(choice==2){
-    reference.conversion(temperature,2);
+else if (choice == 2) {
+    reference.conversion(temperature, 2);
 }

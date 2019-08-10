@@ -7,19 +7,20 @@
 * @version : 1.0
 * @since : 06-August-2019
 *******************************************************************************************************************/
-let read=require('readline-sync');
-let stringManage=require('../leapYear/leapYearBL.js');
+let read = require('readline-sync');
+let stringManage = require('../leapYear/leapYearBL.js');
 let year = read.question('Enter year');
-if(year.match("^/d[0-9]{4}$")){
-let result=stringManage.leapYear(year);
-if(result==true){
-    console.log(year+'is leap year');
-}
-    else{
-        console.log(year+'is not leap year');
+// restricted input of year to exact 4 using regex
+if (year.match("^/d[0-9]{4}$")) {
+    let result = stringManage.leapYear(year);
+    if (result == true) {
+        console.log(year + 'is leap year');
+    }
+    else {
+        console.log(year + 'is not leap year');
     }
 
 }
-else{
+else {
     console.log('enter correct format');
 }

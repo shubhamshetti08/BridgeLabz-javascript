@@ -7,7 +7,8 @@
 * @version : 1.0
 * @since : 07-August-2019
 *******************************************************************************************************************/
-let read=require('readline-sync');
-let reference=require('../harmonicNumber/harmonicNumberBL');
-let num =read.question('enter range to print harmonic number');
+//readline sync
+let read = require('readline-sync');
+let reference = require('../harmonicNumber/harmonicNumberBL');
+let num = read.question('enter range to print harmonic number');
 console.log(reference.harmonicNumber(num));

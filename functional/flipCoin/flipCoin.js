@@ -7,8 +7,8 @@
 * @version : 1.0
 * @since : 06-August-2019
 *******************************************************************************************************************/
-let read=require('readline-sync');
-let stringManage=require('../flipCoin/flipCoinBL.js');
+let read = require('readline-sync');
+let stringManage = require('../flipCoin/flipCoinBL.js');
 let number = read.question('Enter no.of times to flip coin');
-let x=stringManage.flip(number);
-console.log(x[0],x[1]);
+let x = stringManage.flip(number);
+console.log(x[0], x[1]);

@@ -7,7 +7,7 @@
 * @version : 1.0
 * @since : 07-August-2019
 *******************************************************************************************************************/
-let read =require('readline-sync');
+let read = require('readline-sync');
 let reference = require("../couponNumbers/couponNumbersBL");
 let number = read.question('enter toltal no.of coupons to be picked');
 reference.couponNumbers(number);

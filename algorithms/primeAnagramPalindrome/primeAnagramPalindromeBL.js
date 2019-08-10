@@ -1,4 +1,9 @@
 var array = [];
+/**
+* @description : taking number to find prime
+* @param {int}, which has data information
+* @return {data}, returning boolean
+*/
 prime = (n) => {
     for (let i = 2; i < n; i++) {
         if ((n % i) == 0) {
@@ -10,7 +15,11 @@ prime = (n) => {
 //module.exports={prime};
 
 
-
+/**
+* @description : taking array
+* @param {int}, which has data information
+* @return {data}, returning sorted array
+*/
 isAnagram = (arr) => {
     //console.log(arr);
     var a1 = [];
@@ -19,21 +28,27 @@ isAnagram = (arr) => {
     for (let j = 0; j < arr.length; j++) {
         for (let k = j + 1; k < arr.length; k++) {
             if (arr[j].length == arr[k].length) {
+                // converting to string
                 let a = arr[j].toString();
                 let b = arr[k].toString();
                 //console.log(a);
+                //converting to string array
                 a1 = a.split('');
                 b1 = b.split('');
+                // sorting array
                 a1.sort();
                 //console.log(b1);
                 b1.sort();
                 //console.log(a1);
+                //joining the array
                 a1 = parseInt(a1.join(''));
                 b1 = parseInt(b1.join(''));
                 //console.log(a1);
 
                 if (a1 === b1) {
+                    // for distinct value
                     if (!ana.includes(a1)) {
+                        // ading to array
                         ana.push(a1);
                     }
                 }
@@ -42,32 +57,38 @@ isAnagram = (arr) => {
 
 
         }
-     }
+    }
     console.log(ana);
     return ana;
 }
 //module.exports = { prime, isAnagram };
+
+/**
+* @description : taking number to check palindrome
+* @param {int}, which has data information
+* @return {data}, printing palindrom
+*/
 isPalindrome = (num) => {
-  var p=[];
- 
+    var p = [];
+
     var temp = num;
-    var sum=0;
-    var r=0;
+    var sum = 0;
+    var r = 0;
     while (num > 0) {
-       
-         r =parseInt(num % 10);
-         sum = parseInt((sum * 10) + r);
+        // storing reminder
+        r = parseInt(num % 10);
+        sum = parseInt((sum * 10) + r);
         num = parseInt(num / 10);
     }
     if (temp == sum) {
-        
-    console.log(temp);
-       
-        
+
+        console.log(temp);
+
+
     }
-   // return false;
-  //console.log(p);
-  
+    // return false;
+    //console.log(p);
+
 }
 
 

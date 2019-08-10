@@ -7,17 +7,17 @@
 * @version : 1.0
 * @since : 07-August-2019
 *******************************************************************************************************************/
-let read =require('readline-sync');
+let read = require('readline-sync');
 let reference = require('../gambler/gamblerBL.js')
-let stake=read.question('enter stake  ');
-if(stake<=0){
+let stake = read.question('enter stake  ');
+if (stake <= 0) {
     console.log('stake should be greater than 0');
-    stake=read.question('enter stake  ');
+    stake = read.question('enter stake  ');
 }
-let goal =read.question('enter goal  ');
-if(goal<stake){
+let goal = read.question('enter goal  ');
+if (goal < stake) {
     console.log('goal should be greater than stake');
-    goal=read.question('enter goal  ');
+    goal = read.question('enter goal  ');
 }
-let result=reference.gambler(stake,goal);
-console.log('win ='+result[0]+'%'+'  lost ='+result[1]+'%');
+let result = reference.gambler(stake, goal);
+console.log('win =' + result[0] + '%' + '  lost =' + result[1] + '%');

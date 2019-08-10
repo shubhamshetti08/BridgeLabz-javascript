@@ -8,14 +8,15 @@
 * @since : 08-August-2019
 *******************************************************************************************************************/
 
-let read= require('readline-sync');
-let reference= require('../primeNumbers/isPrimeBL');
-for(let n=1;n<1000;n++){
-   var result= reference.isPrime(n);
+let read = require('readline-sync');
+let reference = require('../primeNumbers/isPrimeBL');
+// to send 1 to 1000 numbers
+for (let n = 1; n < 1000; n++) {
+    var result = reference.isPrime(n);
 
-if(result==true){
-    
-    console.log(n+'  is prime');
-}
+    if (result == true) {
+
+        console.log(n + '  is prime');
+    }
 
 }

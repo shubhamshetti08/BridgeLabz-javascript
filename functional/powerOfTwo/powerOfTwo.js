@@ -7,7 +7,8 @@
 * @version : 1.0
 * @since : 07-August-2019
 *******************************************************************************************************************/
-let read=require('readline-sync');
-let reference=require('../powerOfTwo/powerOfTwoBL.js');
-let num=process.argv[2];
+let read = require('readline-sync');
+let reference = require('../powerOfTwo/powerOfTwoBL.js');
+// taking user input from command line aurgument 
+let num = process.argv[2];
 console.log(reference.powerOfTwo(num));

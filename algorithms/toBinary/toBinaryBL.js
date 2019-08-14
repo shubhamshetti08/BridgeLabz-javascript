@@ -8,7 +8,7 @@ exports.toBinary = (n) => {
     while (n > 0) {
         let r = (n % 2);
         n = parseInt(n / 2);
-        var s = r + '' + s;
+         s = r + '' + s;
     }
     return s;
 }

@@ -38,18 +38,20 @@ isAnagram = (arr) => {
                 // sorting array
                 a1.sort();
                 //console.log(b1);
-                b1.sort();
+               var b2= b1.sort();
                 //console.log(a1);
                 //joining the array
                 a1 = parseInt(a1.join(''));
                 b1 = parseInt(b1.join(''));
                 //console.log(a1);
 
-                if (a1 === b1) {
+                if (a1 === b2) {
                     // for distinct value
-                    if (!ana.includes(a1)) {
+                    //if (!ana.includes(a1)) {
                         // ading to array
                         ana.push(a1);
+                        ana.push(b1);
+
                     }
                 }
 
@@ -57,7 +59,7 @@ isAnagram = (arr) => {
 
 
         }
-    }
+    //}
     console.log(ana);
     return ana;
 }

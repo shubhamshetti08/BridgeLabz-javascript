@@ -9,11 +9,13 @@ couponNumbers = (number) => {
     let s = [];
     while (loop == 0) {
         //generating random numbers, *10  gives integer,%number is for range of random.
-        let a = (parseInt(Math.random() * 10) % number);
+        let a = (parseInt(Math.random() * (100-1)) );
         count++;
         // adding distinct numbers
-        if (s.includes != true)
+        if (!s.includes(a)) {
             s.push(a);
+        }
+
         if (s.length == number) {
             loop = 1;
         }

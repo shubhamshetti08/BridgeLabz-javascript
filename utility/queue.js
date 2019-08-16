@@ -24,7 +24,7 @@ class Queue{
             node.pre=this.rear;
             this.rear=node;
         }
-        this.print();
+        //this.print();
     }
 
     print(){
@@ -52,7 +52,7 @@ class Queue{
         if(!this.front){
             this.rear=null;
         }
-        this.print();
+        //this.print();
         
         
         return node;

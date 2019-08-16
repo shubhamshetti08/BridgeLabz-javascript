@@ -87,7 +87,7 @@ class LinkedList {
     //     return
     //     }
     //     this.current = this.head;
-    //     this.temp = this.head;
+    //     this.temp = this.head.next;
     //     while (this.temp != null && this.temp.data != data) {
     //     this.current = this.temp;
     //     this.temp = this.temp.next;
@@ -111,8 +111,9 @@ class LinkedList {
             this.temp = this.temp.next
 
         }
-        return arr;
         // console.log(this.temp.data)
+        return arr;
+        
 
     }
     /*

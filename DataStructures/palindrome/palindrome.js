@@ -1,3 +1,4 @@
+
 const util=require('../../utility/queue');
 const read=require('readline-sync');
 var string=read.question('Enter word');

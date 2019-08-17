@@ -4,22 +4,26 @@
 * @return {data}, printing counts to add numbers
 */
 couponNumbers = (number) => {
-    let loop = 0;
-    let count = 0;
-    let s = [];
-    while (loop == 0) {
-        //generating random numbers, *10  gives integer,%number is for range of random.
-        let a = (parseInt(Math.random() * (100-1)) );
-        count++;
-        // adding distinct numbers
-        if (!s.includes(a)) {
-            s.push(a);
-        }
+    try {
+        let loop = 0;
+        let count = 0;
+        let s = [];
+        while (loop == 0) {
+            //generating random numbers, *10  gives integer,%number is for range of random.
+            let a = (parseInt(Math.random() * (100 - 1)));
+            count++;
+            // adding distinct numbers
+            if (!s.includes(a)) {
+                s.push(a);
+            }
 
-        if (s.length == number) {
-            loop = 1;
+            if (s.length == number) {
+                loop = 1;
+            }
+            // console.log(s);
         }
-        // console.log(s);
+    } catch (e) {
+        console.log(e);
     }
     console.log(count + " " + s);
 }

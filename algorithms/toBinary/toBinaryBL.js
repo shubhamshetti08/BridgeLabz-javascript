@@ -4,11 +4,15 @@
 * @return {data}, returning binary number
 */
 exports.toBinary = (n) => {
-    var s = '';
-    while (n > 0) {
-        let r = (n % 2);
-        n = parseInt(n / 2);
-         s = r + '' + s;
+    try {
+        var s = '';
+        while (n > 0) {
+            let r = (n % 2);
+            n = parseInt(n / 2);
+            s = r + '' + s;
+        }
+        return s;
+    } catch (e) {
+        console.log(e);
     }
-    return s;
 }

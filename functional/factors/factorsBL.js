@@ -4,6 +4,7 @@
 * @return {data}, printing factors og given number
 */
 factors = (num) => {
+    try{
     for (let i = 2; i <= num; i++) {
         // cheking reminders is 0 or not
         while (num % i == 0) {
@@ -13,5 +14,8 @@ factors = (num) => {
         }
     }
 
+}catch(e){
+    console.log(e);
+}
 }
 module.exports = { factors };

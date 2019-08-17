@@ -68,7 +68,7 @@ class LinkedList {
             return null;
         }
         if (!this.head.next) {
-            this.head.next = null;
+            this.head = null;
             return;
         }
         let prev = this.head;

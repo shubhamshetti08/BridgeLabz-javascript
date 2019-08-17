@@ -4,9 +4,13 @@
 * @return {data}, returning payment(data)
 */
 exports.monthlyPayment = (P, R, Y) => {
+    try{
     let n = 12 * Y;
     r = R / 12 * 100;
     //payment using pawer of(r+1)
     var payment = P * r / 1 - (Math.pow(1 + r, -n));
     return payment;
+}catch(e){
+    console.log(e);
+}
 }

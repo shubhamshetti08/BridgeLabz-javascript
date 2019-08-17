@@ -1,3 +1,4 @@
+//created node class with attributes data,previous and next
 class Node {
     constructor(data){
         this.data=data;
@@ -5,6 +6,7 @@ class Node {
         this.pre=null;
     }
 }
+// creared stack class with attribute front and rear
 class Queue{
     constructor(){
         this.front=null;
@@ -13,7 +15,11 @@ class Queue{
    isEmpty(){
        return !this.front;
    }
-
+  /*
+* @description : enqueue
+* @purpose:   link each data to node at the end of queue.
+* @param {data}, which has data information. 
+*/
     enqueue(data){
         let node = new Node(data);
         if(this.isEmpty()){
@@ -26,7 +32,11 @@ class Queue{
         }
         //this.print();
     }
-
+/*
+* @description : print
+* @purpose:   prints data from queue.
+* @param {}, which has data information. 
+*/
     print(){
         if(this.isEmpty()){
             console.log('empty');
@@ -43,6 +53,11 @@ class Queue{
         }
        
     }
+      /*
+* @description : frontpop
+* @purpose:   remove node with data from front of the queue.
+* @param {}, which has data information. 
+*/
     frontpop(){
         
         let node=this.front;
@@ -57,6 +72,11 @@ class Queue{
         
         return node;
     }
+      /*
+* @description : rearpop
+* @purpose:   remove node with data from front of the queue.
+* @param {}, which has data information. 
+*/
     rearpop(){
         
         let node=this.rear;
@@ -71,18 +91,33 @@ class Queue{
         
         return node;
     }
+     /*
+* @description : addFront
+* @purpose:   add node with data to front of the queue.
+* @param {data}, which has data information. 
+*/
 
     addFront(data){
         let node = new Node(data);
         if(this.isEmpty){
             this.front=node;
+            this.rear=node
         }
         else{
+            node.next=this.front;
+            this.front.pre=node;
             this.front=node;
+
 
         }
 
     }
+    /*
+* @description : palindrome
+* @purpose:  checks for data in node if same prints palindrome else not.
+* @param {}, which has data information. 
+*/
+
     palindrome(){
         while(this.front!=this.rear){
             if(this.front.data!=this.rear.data){

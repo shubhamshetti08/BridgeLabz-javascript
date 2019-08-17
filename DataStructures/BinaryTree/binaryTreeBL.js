@@ -1,3 +1,8 @@
+ /*
+* @description : binary
+* @purpose:   to find ourt factorials
+* @param {data}, which has data information. 
+*/
 exports.binary = (input) => {
     class BSTNumber {
         factorial(n) {

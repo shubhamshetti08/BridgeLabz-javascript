@@ -1,10 +1,11 @@
+//created node class with attributes data and next
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-
+// creared stack class with attribute head
 class LinkedList {
     constructor() {
         this.head = null;
@@ -74,7 +75,7 @@ class LinkedList {
         let prev = this.head;
         let tail = this.head.next
         while (tail.next !== null) {
-            prev = tail;                                                                                                                          
+            prev = tail;
             tail = tail.next;
         }
         prev.next = null;
@@ -107,13 +108,13 @@ class LinkedList {
         this.temp = this.head
         while (this.temp != null) {
             arr.push(this.temp.data);
-           // console.log(this.temp.data)
+            // console.log(this.temp.data)
             this.temp = this.temp.next
 
         }
         // console.log(this.temp.data)
         return arr;
-        
+
 
     }
     /*
@@ -163,7 +164,7 @@ class LinkedList {
         }
         if (this.temp == null) {
             console.log("key not found");
-            console.log(key,' is inserted');
+            console.log(key, ' is inserted');
             this.insertAtEnd(key);
             //this.sortData()
             this.disp()

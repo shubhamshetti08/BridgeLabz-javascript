@@ -21,8 +21,8 @@ for (let i = 1; i <= rows; i++) {
         if (ref.isPrime(j)) {
             arr2.push(j);
         }
-    } a1 = link.anagrams(arr2);
+    } link.anagrams(arr2);
 
-    arr.push(a1);
+  
 }
 //console.log(arr);

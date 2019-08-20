@@ -7,7 +7,7 @@
 * @version : 1.0
 * @since : 06-August-2019
 *******************************************************************************************************************/
-let read = require('readline-sync');
+let read=require('readline-sync');
 let stringManage = require('../replaceString/replaceBL.js');
 let s = "<<username>> how are you";
 let name = read.question('enter username:');

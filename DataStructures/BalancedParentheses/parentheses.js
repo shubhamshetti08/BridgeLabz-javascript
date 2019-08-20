@@ -13,7 +13,7 @@ const util = require('../BalancedParentheses/parenthesesBL');
 // read from user
 const read = require('readline-sync');
 var exp = read.question('enter arithmetic expression   ');
-var count = 0;
+//var count = 0;
 console.log(exp);
 // to split expression
 let a = exp.split('');

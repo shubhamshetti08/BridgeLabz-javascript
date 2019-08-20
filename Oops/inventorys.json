@@ -1,0 +1,48 @@
+{
+    "Grocery": {
+        "rice": [{
+            "name": "dawat",
+            "weight": "10",
+            "price": "50"
+        }, {
+            "name": "Indiagate",
+            "weight": "10",
+            "price": "100"
+        }, {
+            "name": "brown",
+            "weight": "10",
+            "price": "200"
+        }],
+        "wheat": [{
+            "name": "ashirvad",
+            "weight": "10",
+            "price": "50"
+        }, {
+            "name": "local",
+            "weight": "10",
+            "price": "30"
+        }, {
+            "name": "polished",
+            "weight": "10",
+            "price": "200"
+        }],
+        "pulse": [{
+            "name": "kidney beans",
+            "weight": "10",
+            "price": "50"
+        }, {
+            "name": "lima beans",
+            "weight": "10",
+            "price": "100"
+        }, {
+            "name": "butter beans",
+            "weight": "10",
+            "price": "100"
+        }],
+        "biscuits": [{
+            "name": "parle G",
+            "weight": "1",
+            "price": "5"
+        }]
+    }
+}

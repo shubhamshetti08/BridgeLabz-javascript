@@ -6,12 +6,13 @@ const reference = require('../../utility/stack');
 * @purpose:   compares open parentheses with closed ones if parenthese are correct then prints balanced.
 * @param {}, which has data information. 
 */
-exports.parentheses = (exp) => {
+exports.parentheses = (a) => {
+    var count=0;
     //creats object of stack
     var obj = new reference();
     try {
 
-        for (let i = 0; i < exp.length; i++) {
+        for (let i = 0; i < a.length; i++) {
             // console.log(exp[i]);
             //console.log(exp.length);
             if (a[i] == '(') {

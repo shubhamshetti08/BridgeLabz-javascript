@@ -32,6 +32,6 @@ exports.binary = (input) => {
         }
 
     }
-    var o = new BSTNumber();
-    console.log("The number of possibilities are " + o.NumOfBST());
+    var obj = new BSTNumber();
+    console.log("The number of possibilities are " + obj.NumOfBST());
 }

@@ -28,12 +28,12 @@ exports.cashCounter = (amount, limit) => {
                 }
             }
             else if (entry == 2) {
-                if (amount > 1) {
+                if (amount > 0) {
 
                     var wid = read.questionInt('enter amount to withdraw');
                     if (wid > amount) {
                         console.log('cash is not available plz try again')
-                        wid = read.questionInt('enter amount to withdraw');
+                        wid = read.questionInt('enter '+amount+' to withdraw');
 
                     }
                     else {

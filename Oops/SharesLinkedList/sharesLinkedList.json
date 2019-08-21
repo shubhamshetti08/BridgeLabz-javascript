@@ -11,11 +11,5 @@
         "name": "reliance",
         "numberofshares": "10",
         "price": "50"
-    }],
-    "lic": [{
-        "name": "old",
-        "numberofshares": "10",
-        "price": "10",
-        "time": "2019-08-21T08:47:47.854Z"
     }]
 }

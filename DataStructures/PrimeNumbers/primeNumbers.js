@@ -11,23 +11,23 @@
 const ref = require('../../algorithms/primeNumbers/isPrimeBL')
 // limiting rows
 var rows = 10;
-var clos = 100;
+var clos = 1000;
 var arr = [];
 try {
     for (let i = 1; i <= rows; i++) {
         var arr2 = [];
         str = "";
-        // for(j=1;j<=clos;j++){
+         //for(j=1;j<=clos;j++){
         //sending (1-100)numbers for 1st row and (100-200) for 2nd ......till 1000
         for (let j = (i - 1) * clos; j <= i * clos; j++) {
             if (ref.isPrime(j)) {
                 arr2.push(j);
                 //converting in string
-                str = str + " " + j;
+                //str = str + " " + j;
             }
         }
 
-        arr.push(str);
+        arr.push(arr2);
     }
 } catch (e) {
     console.log(e);

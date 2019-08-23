@@ -7,6 +7,12 @@
 * @version : 1.0
 * @since : 06-August-2019
 *******************************************************************************************************************/
+var http=require("http");
+http.createServer(function(req,res){
+    res.status(200).send("hello world");
+   // res.end("hello world");
+
+
 let read=require('readline-sync');
 let stringManage = require('../replaceString/replaceBL.js');
 let s = "<<username>> how are you";
@@ -17,3 +23,7 @@ if (stringManage.checkStringLen(name)) {
 else {
     console.log(stringManage.replaceString(s, "<<username>>", name));
 }
+
+
+}).listen(3000);
+console.log('server http://127.0.0.1:3000/');

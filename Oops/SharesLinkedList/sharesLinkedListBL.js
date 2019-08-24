@@ -15,10 +15,20 @@ module.exports = class LinkedList {
         this.content = null;
         this.fileName = null;
     }
+    /*
+     * @description : jsonParse
+     * @purpose:   it reads json file from given adress and convert it to script obj.
+     * @param {data}, which has data information. 
+     */
     jsonParse(fileName) {
         this.fileName = fileName;
         this.content = JSON.parse(fs.readFileSync(fileName));
     }
+    /*
+     * @description : addShares
+     * @purpose:   it add elements to jsonfile
+     * @param {data}, which has data information. 
+     */
     addShares(name, numberofshares, price) {
         var newNode = new Node(name, numberofshares, price);
         if (!this.head) {
@@ -34,6 +44,11 @@ module.exports = class LinkedList {
             return this.head;
         }
     }
+    /*
+     * @description : deleteShares
+     * @purpose:   it delete elements from account
+     * @param {data}, which has data information. 
+     */
     deleteShares(key) {
         if (this.head.data.name == key) {
             this.head = this.head.next;

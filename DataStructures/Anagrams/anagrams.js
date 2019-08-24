@@ -12,7 +12,7 @@ const ref = require('../../algorithms/primeNumbers/isPrimeBL')
 const link = require('../Anagrams/anagramsBL')
 var rows = 10;
 var clos = 100;
-var arr = [];
+//var arr = [];
 
 for (let i = 1; i <= rows; i++) {
     var arr2 = [];

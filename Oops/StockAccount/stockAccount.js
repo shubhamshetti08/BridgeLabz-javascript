@@ -1,11 +1,35 @@
-const reference=require('../StockAccount/stockAccountBL');
-var obj=new reference();
+/********************************************************************************************************************
+* @Execution : default node : cmd> stockAccount.js
+* @Purpose : To perform operations specified. 
+* @description : this program is to read in Stock Names, Number of Share, Share Price. 
+                add shares and time of buy and save it to json file.
+                I/P -> N number of Stocks, for Each Stock Read In the Share Name, Number of Share, and Share Price
+
+* @overview : oops concepts
+* @author : shubham shetti <shubhamshetti08@gmail.com>
+* @version : 1.0
+* @since : 21-august-2019
+*******************************************************************************************************************/
+const read = require('readline-sync');
+const reference = require('../StockAccount/stockAccountBL');
+var obj = new reference();
 obj.jsonParse('/home/admin1/Desktop/shubham/Oops/stock.json');
-var time=new Date();
-
-obj.stockAccount('lic');
-obj.buyShares('lic','old','10','10',time);
-
-//obj.sell('lic');
-obj.printReport();
-obj.save();
+var time = new Date();
+var choice = ('enter 1 to buy shares or 2 to sell')
+if (choice == 1) {
+    var add = read.question('enter name of category');
+    var company = read.question('enter name of company');
+    var numberofshares = read.question('enter numberofshares');
+    var price = read.question('enter price');
+    obj.stockAccount(add);
+    obj.save();
+    obj.printReport();
+} else if (choice == 2) {
+    obj.buyShares(company, numberofshares, price, time);
+    var name = read.question('enter company name to delete')
+    obj.sell(name);
+    obj.printReport();
+    obj.save();
+} else {
+    console.log('wrong choice');
+}

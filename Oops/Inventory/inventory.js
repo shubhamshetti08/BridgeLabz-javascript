@@ -6,10 +6,10 @@
 * @overview : oops concepts
 * @author : shubham shetti <shubhamshetti08@gmail.com>
 * @version : 1.0
-* @since : 19-august-2019
+* @since : 20-august-2019
 *******************************************************************************************************************/
-const util= require('../../utility/inventory');
-var invent=new util();
+const util = require('../../utility/inventory');
+var invent = new util();
 invent.jsonParse('/home/admin1/Desktop/shubham/Oops/inventorys.json');
 invent.disp();
 invent.value();

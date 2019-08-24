@@ -4,6 +4,11 @@ module.exports = class Inventory {
         this.content = null;
         this.fileName = null;
     }
+    /*
+     * @description : jsonParse
+     * @purpose:   it reads json file from given adress and convert it to script obj.
+     * @param {data}, which has data information. 
+     */
     jsonParse(fileName) {
         this.fileName = fileName;
         this.content = JSON.parse(fs.readFileSync(fileName));
@@ -16,7 +21,11 @@ module.exports = class Inventory {
 
         });
     }
-
+    /*
+     * @description : value
+     * @purpose:   it calculate value of inventory
+     * @param {data}, which has data information. 
+     */
     value() {
         var sum1 = 0;
         this.content.Stock.forEach(element => {
@@ -24,7 +33,7 @@ module.exports = class Inventory {
 
         });
         this.content.Stock.forEach(element => {
-            console.log(element.name+'  is rs  '+element.price*element.numberofshares);
+            console.log(element.name + '  is rs  ' + element.price * element.numberofshares);
         });
         // console.log(' value of  ' + this.content.Stock[0].name + "  is rs " + this.content.Stock[0].price * this.content.Stock[0].numberofshares);
         // console.log(' value of  ' + this.content.Stock[1].name + "  is rs " + this.content.Stock[1].price * this.content.Stock[1].numberofshares);
@@ -32,5 +41,3 @@ module.exports = class Inventory {
         console.log('total value of stocks ' + sum1 + "rs");
     }
 }
-
-

@@ -55,7 +55,7 @@ module.exports = class Share {
      * @purpose:   it add elements to account
      * @param {data}, which has data information. 
      */
-    buyShares(category = null, name = null, numberofshares = null, price = null, time) {
+    buyShares(category, name, numberofshares, price, time) {
 
         this.content[category].push({
             "name": name,
@@ -70,7 +70,7 @@ module.exports = class Share {
      * @purpose:   it deletes account
      * @param {data}, which has data information. 
      */
-    sell(category = null) {
+    sell(category) {
         this.content[category] = null;
         //this.content=this.content.map((category)=>category!='lic');
     }

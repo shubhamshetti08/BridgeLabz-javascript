@@ -13,7 +13,7 @@ const reference = require('../SharesLinkedList/sharesLinkedListBL');
 const read = require('readline-sync');
 var obj = new reference();
 obj.jsonParse('/home/admin1/Desktop/shubham/Oops/SharesLinkedList/sharesLinkedList.json');
-var choice = ('enter 1 to buy shares or 2 to sell')
+var choice = ('enter 1 to buy shares or 2 to sell');
 if (choice == 1) {
     var company = read.question('enter name of company');
     var numberofshares = read.question('enter numberofshares');

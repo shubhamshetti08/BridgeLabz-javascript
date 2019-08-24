@@ -34,7 +34,7 @@ class Queue {
      * @purpose:   link each data to node at the end of queue.
      * @param {data}, which has data information. 
      */
-    buyShares(name = null, numberofshares = null, price = null, time = null) {
+    buyShares(name , numberofshares , price , time ) {
         let node = new Node(name, numberofshares, price, time);
         if (this.isEmpty()) {
             this.front = this.rear = node;

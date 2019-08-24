@@ -65,7 +65,7 @@ module.exports = class Inventory {
      * @purpose:   it add elements to grocery
      * @param {data}, which has data information. 
      */
-    addElements(category = null, name = null, weight = null, price = null) {
+    addElements(category , name , weight, price ) {
         this.content.Grocery[category].push({
             "name": name,
             "weight": weight,

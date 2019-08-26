@@ -22,10 +22,10 @@ if (choice == 1) {
     var numberofshares = read.question('enter numberofshares');
     var price = read.question('enter price');
     obj.stockAccount(add);
+    obj.buyShares(company, numberofshares, price, time);
     obj.save();
     obj.printReport();
 } else if (choice == 2) {
-    obj.buyShares(company, numberofshares, price, time);
     var name = read.question('enter company name to delete')
     obj.sell(name);
     obj.printReport();
